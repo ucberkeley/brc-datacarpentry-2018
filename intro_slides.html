@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
-  <meta name="author" content="September 19, 2017" />
+  <meta name="author" content="August 7, 2018" />
   <title>Data Carpentry workshop: Compational Resources at Berkeley and Beyond</title>
   <style type="text/css">code{white-space: pre;}</style>
   <link rel="stylesheet" type="text/css" media="screen, projection, print"
@@ -18,9 +18,9 @@
 <div class="slide titlepage">
   <h1 class="title">Data Carpentry workshop: Compational Resources at Berkeley and Beyond</h1>
   <p class="author">
-September 19, 2017
+August 7, 2018
   </p>
-  <p class="date">Chris Paciorek and Deb McCaffrey</p>
+  <p class="date">Chris Paciorek</p>
 </div>
 <div id="outline" class="slide section level1">
 <h1>Outline</h1>
@@ -29,7 +29,7 @@ September 19, 2017
 <ul>
 <li>Savio campus cluster
 <ul>
-<li>Getting access to the system - FCA, condo</li>
+<li>Getting access to the system - faculty computing allowance, condo</li>
 <li>Savio computing nodes</li>
 <li>Cluster job submission/scheduling</li>
 </ul></li>
@@ -46,9 +46,11 @@ September 19, 2017
 <h1>System capabilities and hardware</h1>
 <p>Berkeley Research Computing runs the campus cluster, Savio.</p>
 <ul>
-<li>Savio is a &gt;380-node, &gt;8000-core, &gt;169000-gpu-core Linux cluster rated at &gt;350 peak teraFLOPS.</li>
+<li>Savio is a &gt;380-node, &gt;8000-core, &gt;169000-gpu-core Linux cluster rated at &gt;350 peak teraFLOPS.
+<ul>
 <li>about 174 compute nodes provided by the UC Berkeley for general access</li>
 <li>about 211 compute nodes contributed by researchers in the Condo program</li>
+</ul></li>
 </ul>
 </div>
 <div id="getting-access-to-the-system---fca-and-condo" class="slide section level1">
@@ -81,7 +83,7 @@ September 19, 2017
 <li>interactive jobs</li>
 <li>batch/background jobs</li>
 </ul>
-<p>Here's an example job script that I'll run. You'll need to modify the various &quot;--&quot; flags for your own work.</p>
+<p>Here's an example job script for a batch job. You'll need to modify the various &quot;--&quot; flags for your own work.</p>
 <pre><code>#!/bin/bash
 # Job name:
 #SBATCH --job-name=test
@@ -102,10 +104,10 @@ September 19, 2017
 module load python/3.6
 python calc.py &gt;&amp; calc.out</code></pre>
 </div>
-<div id="bioinformatics-on-savio-things-to-keep-in-mind" class="slide section level1">
-<h1>Bioinformatics on Savio: things to keep in mind</h1>
+<div id="genomics-on-savio-things-to-keep-in-mind" class="slide section level1">
+<h1>Genomics on Savio: things to keep in mind</h1>
 <ul>
-<li>some software may not be installed; in some cases we can help</li>
+<li>some standard genomics software may not be installed; in some cases we can help</li>
 <li>three-day time limit for FCAs (but not condos)</li>
 <li>long queue for jobs up to 10 days but limited cores and not high memory</li>
 <li>memory limits sometimes are an issue</li>
@@ -122,7 +124,6 @@ python calc.py &gt;&amp; calc.out</code></pre>
 <li>bDrive (Berkeley Google drive): unlimited</li>
 </ul>
 <p>More details on Savio storage are here <a href="https://research-it.berkeley.edu/services/high-performance-computing/user-guide/savio-user-guide">here in the <em>Storage and Backup</em> section</a>.</p>
-<p>Let's see how we would transfer files/data to/from Savio using a few different approaches.</p>
 </div>
 <div id="data-transfer-for-large-data" class="slide section level1">
 <h1>Data transfer for large data</h1>
@@ -136,9 +137,22 @@ python calc.py &gt;&amp; calc.out</code></pre>
 <h1>NSF's XSEDE: To infinity and beyond</h1>
 <p><a href="https://xsede.org">XSEDE</a> provides free access to NSF-funded clusters around the US, e.g.,</p>
 <ul>
-<li>Bridges and Comet: Savio-like clusters (including time limits)</li>
-<li>Jetstream cloud environment: long-running VMs, GUIs, science gateways (e.g., interface to your own project's products)</li>
+<li>Bridges and Comet: Savio-like clusters
+<ul>
+<li>CPUS, GPUs, big-memory</li>
+<li>also generally have time limits</li>
+</ul></li>
+<li>Jetstream cloud environment:
+<ul>
+<li>long-running VMs</li>
+<li>GUIs</li>
+<li>science gateways (e.g., interface to your own project's products)</li>
+</ul></li>
+<li>there are other clusters as well</li>
 </ul>
+</div>
+<div id="accessing-xsede" class="slide section level1">
+<h1>Accessing XSEDE</h1>
 <p>Several modes of (free) access:</p>
 <ul>
 <li>access through BRC (email brc@berkeley.edu)</li>
@@ -167,6 +181,7 @@ python calc.py &gt;&amp; calc.out</code></pre>
 <li>Tues. 10-12, Wed. 1:30-3, Thur. 9:30-11:30 in AIS (Dwinelle 117)</li>
 </ul></li>
 </ul>
+<p>Don't hesitate to contact us; we're friendly, even with basic questions.</p>
 </div>
 <div id="upcoming-events" class="slide section level1">
 <h1>Upcoming events</h1>

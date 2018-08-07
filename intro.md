@@ -1,6 +1,6 @@
 % Data Carpentry workshop: Compational Resources at Berkeley and Beyond
-% September 19, 2017
-% Chris Paciorek and Deb McCaffrey
+% August 7, 2018
+% Chris Paciorek
 
 
 # Outline
@@ -10,7 +10,7 @@ Berkeley Research IT helps researchers through its Berkeley Research Computing (
 This (brief) session will cover the following topics:
 
  - Savio campus cluster
-     - Getting access to the system - FCA, condo
+     - Getting access to the system - faculty computing allowance, condo
      - Savio computing nodes
      - Cluster job submission/scheduling
  - Disk storage at Berkeley
@@ -24,9 +24,9 @@ This (brief) session will cover the following topics:
 
 Berkeley Research Computing runs the campus cluster, Savio.
 
-- Savio is a >380-node, >8000-core, >169000-gpu-core Linux cluster rated at >350 peak teraFLOPS. 
-   - about 174 compute nodes provided by the UC Berkeley for general access
-   - about 211 compute nodes contributed by researchers in the Condo program
+  - Savio is a >380-node, >8000-core, >169000-gpu-core Linux cluster rated at >350 peak teraFLOPS. 
+     - about 174 compute nodes provided by the UC Berkeley for general access
+     - about 211 compute nodes contributed by researchers in the Condo program
 
 
 # Getting access to the system - FCA and condo
@@ -59,7 +59,7 @@ All computations are done by submitting jobs to the scheduling software that man
  - interactive jobs
  - batch/background jobs
 
-Here's an example job script that I'll run. You'll need to modify the various "--" flags for your own work.
+Here's an example job script for a batch job. You'll need to modify the various "--" flags for your own work.
 
 ```
 #!/bin/bash
@@ -83,9 +83,9 @@ module load python/3.6
 python calc.py >& calc.out
 ```
 
-# Bioinformatics on Savio: things to keep in mind
+# Genomics on Savio: things to keep in mind
 
- - some software may not be installed; in some cases we can help
+ - some standard genomics software may not be installed; in some cases we can help
  - three-day time limit for FCAs (but not condos)
  - long queue for jobs up to 10 days but limited cores and not high memory
  - memory limits sometimes are an issue
@@ -104,7 +104,6 @@ Here are some options for moderate-large disk storage options:
 More details on Savio storage are here [here in the *Storage and Backup* section](https://research-it.berkeley.edu/services/high-performance-computing/user-guide/savio-user-guide).
 
 
-Let's see how we would transfer files/data to/from Savio using a few different approaches. 
 
 # Data transfer for large data
 
@@ -117,8 +116,16 @@ Some options include:
 
 [XSEDE](https://xsede.org) provides free access to NSF-funded clusters around the US, e.g.,
 
- - Bridges and Comet: Savio-like clusters (including time limits)
- - Jetstream cloud environment: long-running VMs, GUIs, science gateways (e.g., interface to your own project's products)
+ - Bridges and Comet: Savio-like clusters
+    - CPUS, GPUs, big-memory
+    - also generally have time limits
+ - Jetstream cloud environment:
+    - long-running VMs
+    - GUIs
+    - science gateways (e.g., interface to your own project's products)
+ - there are other clusters as well
+
+# Accessing XSEDE
 
 Several modes of (free) access:
 
@@ -140,6 +147,7 @@ BRC can help with all of these.
  - Office hours for any of the above topics:
      - Tues. 10-12, Wed. 1:30-3, Thur. 9:30-11:30 in AIS (Dwinelle 117)
 
+Don't hesitate to contact us; we're friendly, even with basic questions.
 
 # Upcoming events
  
